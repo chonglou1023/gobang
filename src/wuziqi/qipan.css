@@ -1,0 +1,16 @@
+.board {
+    background: url('./qi.webp') no-repeat center center;
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+}
+
+.board-inner {
+    padding: 2px;
+}
+
+.board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+}

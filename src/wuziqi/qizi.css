@@ -1,0 +1,45 @@
+.square {
+    float: left;
+    font-size: 0;
+    font-weight: bold;
+    width: 33px;
+    height: 33px;
+    padding: 0;
+    text-align: center;
+}
+
+.square>.qizi {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: black;
+}
+
+.square>.qizi.white {
+    background-color: white;
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+
+    /* 初始状态完全显示 */
+    50% {
+        opacity: 0.2;
+    }
+
+    /* 中间状态部分隐藏 */
+    100% {
+        opacity: 1.0;
+    }
+
+    /* 结束状态重新显示 */
+}
+
+.square.active {
+    animation: blinker 1s ease-in-out;
+    animation-iteration-count: 3;
+}

@@ -1,0 +1,118 @@
+.game {
+    text-align: center;
+    padding: 20px
+}
+
+.game-title {
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.game-board {
+    font-size: 0;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.control {
+    position: absolute;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    font-size: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.control>.start {
+    padding: 10px 35px;
+    background: radial-gradient(black, transparent);
+    border-radius: 25px;
+    color: aquamarine;
+    cursor: pointer;
+}
+
+.baizi {
+    background: url('./baizi.png') no-repeat center center;
+    background-size: 100%;
+    width: 100px;
+    height: 300px;
+    margin-bottom: 260px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+    transform: rotate(180deg);
+    font-size: 24px;
+}
+
+.baizi.active {
+    animation: blinker 1s infinite;
+}
+
+.heizi {
+    background: url('./heizi.png') no-repeat center center;
+    background-size: 100%;
+    width: 100px;
+    height: 300px;
+    margin-top: 260px;
+    margin-left: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 24px;
+}
+
+.heizi.active {
+    animation: blinker 1s infinite;
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+
+    /* 初始状态完全显示 */
+    50% {
+        opacity: 0.2;
+    }
+
+    /* 中间状态部分隐藏 */
+    100% {
+        opacity: 1.0;
+    }
+
+    /* 结束状态重新显示 */
+}
+
+.game-info {}
+
+.btn {
+    margin: 10px;
+}
+
+.game-result {
+    background: antiquewhite;
+    width: 200px;
+    margin: 10px auto;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.winner {
+    animation: blinker 1s infinite;
+}
+
+.status {
+
+    font-size: 36px;
+    color: red;
+
+}
+
+.status.draw {
+    color: mediumaquamarine;
+}
